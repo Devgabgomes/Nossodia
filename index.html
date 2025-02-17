@@ -37,8 +37,13 @@
             color: #333;
         }
 
+        .div-music{
+            margin: 20px 0px;
+            display: flex;
+        }
+
         .playmusic{
-            margin: 20px;
+            margin: 5px;
         }
 
         .playmusic button{
@@ -241,6 +246,15 @@
             background-position: center;
             background-repeat: no-repeat;
         }
+
+
+        .music{
+            width: 420px;
+            display: flex;
+            margin: 40px 0px;
+            align-items: center;
+            justify-content: space-around;
+        }
     </style>
 </head>
 <body>
@@ -249,7 +263,10 @@
         Your browser does not support the audio tag.
       </audio>
     <div class="title">Para o meu Amor <img src="image/heart.webp" width="25px" alt=""></div>
-    <div class="playmusic"><button>Tocar música</button></div>
+    <div class="div-music">
+        <div class="playmusic"><button onclick="tocarmusic()">Tocar música  ▶</button></div>
+        <div class="playmusic"><button onclick="pararmusic()">Parar música ❚❚</button></div>
+    </div>
     <div class="carrossel">
         <div class="carrossel-images">
             <img src="image/img1.jpg" alt="Imagem 1">
@@ -339,17 +356,38 @@
         <div><h2>Vitória e Gabriel</h2></div>
     </div>
 
+    <div class="title">Músicas que dedico a você princesa <img src="image/heart.webp" width="25px" alt=""></div>
+    <div class="music">
+        <iframe width="200" height="200" src="https://www.youtube.com/embed/8tFDFOSDUqI?si=psXH7HY7H7TKLfyc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="200" height="200" src="https://www.youtube.com/embed/J96pIUD_OEY?si=mz57RW6sbwuuZz5f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="music">
+        <iframe width="200" height="200" src="https://www.youtube-nocookie.com/embed/Bm_kiwytdA4?si=CPyq8PeBZxbG84or" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="200" height="200" src="https://www.youtube-nocookie.com/embed/ZE1yh5NoDiU?si=kCWAiNZzLXxu9JL_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="music">
+        <iframe width="200" height="200" src="https://www.youtube.com/embed/zF2I8IazFNo?si=WB34IBa9iCJLDMes" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="200" height="200" src="https://www.youtube.com/embed/fQv-5OuLODE?si=UUTQCq2pKMSDVvru" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <div class="title">Eu sempre vou lutar por você <img src="image/heart.webp" width="25px" alt=""></div>
+
     <audio id="musica" autoplay>
         <source src="sua-musica.mp3" type="audio/mpeg">
         Seu navegador não suporta o elemento de áudio.
     </audio>
     
     <script>
-        let html = document.querySelector("html");
+ 
         let musica = document.querySelector("#musica");
-        html.addEventListener('click', () => {
+        
+
+        function tocarmusic(){
             musica.play();
-        })
+        }
+        function pararmusic(){
+            musica.pause();
+        }
     </script>
 
     <script>
